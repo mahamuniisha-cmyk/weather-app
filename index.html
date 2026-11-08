@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather App | Isha Mahamuni</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="weather-container">
+
+        <!-- App Heading -->
+        <h1>🌤️ Weather App</h1>
+
+        <!-- Search Section -->
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name..."
+            >
+
+            <button id="searchBtn">Search</button>
+
+        </div>
+
+        <!-- Recently Searched Cities -->
+        <div class="recent-section">
+
+            <h3>Recently Searched</h3>
+
+            <div id="recentCities"></div>
+
+        </div>
+
+        <!-- Current Weather Information -->
+        <div class="weather-info">
+
+            <h2 id="cityName">Kolhapur, India</h2>
+
+            <div class="weather-icon">☀️</div>
+
+            <h2 id="temperature">--°C</h2>
+
+            <p id="description">Weather condition</p>
+
+            <!-- Weather Details -->
+            <div class="weather-details">
+
+                <div class="detail-box">
+
+                    <h3>💧 Humidity</h3>
+
+                    <p id="humidity">--%</p>
+
+                </div>
+
+                <div class="detail-box">
+
+                    <h3>💨 Wind Speed</h3>
+
+                    <p id="wind">-- km/h</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Five Day Forecast -->
+        <div class="forecast-section">
+
+            <h2>5-Day Forecast</h2>
+
+            <div id="forecast" class="forecast-list"></div>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

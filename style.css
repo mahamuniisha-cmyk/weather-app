@@ -1,0 +1,227 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main body */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 15px;
+}
+
+/* Main container */
+.weather-container {
+    width: 100%;
+    max-width: 550px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    text-align: center;
+}
+
+/* Heading */
+h1 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #00c6ff;
+}
+
+/* Search box */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    font-size: 15px;
+}
+
+.search-box input::placeholder {
+    color: #ccc;
+}
+
+.search-box button {
+    padding: 13px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #00c6ff;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #0099cc;
+}
+
+.search-box button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Recently searched */
+.recent-section {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.recent-section h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+#recentCities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.recent-city {
+    padding: 8px 12px;
+    border: 1px solid #00c6ff;
+    border-radius: 20px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.recent-city:hover {
+    background: #00c6ff;
+    color: #111;
+}
+
+/* Weather information */
+.weather-info {
+    margin-top: 20px;
+}
+
+#cityName {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.weather-icon {
+    font-size: 65px;
+    margin: 15px 0;
+}
+
+#temperature {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #00c6ff;
+}
+
+#description {
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 25px;
+}
+
+/* Humidity and wind */
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.detail-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.detail-box h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #00c6ff;
+}
+
+.detail-box p {
+    font-size: 18px;
+}
+
+/* Five-day forecast */
+.forecast-section {
+    margin-top: 30px;
+}
+
+.forecast-section h2 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.forecast-list {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.forecast-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 5px;
+    border-radius: 10px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.forecast-card h3 {
+    font-size: 13px;
+}
+
+.forecast-icon {
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.forecast-card p {
+    font-size: 11px;
+    margin-top: 6px;
+}
+
+/* Mobile responsive design */
+@media (max-width: 480px) {
+    .weather-container {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .forecast-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #temperature {
+        font-size: 38px;
+    }
+}
